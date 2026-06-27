@@ -410,7 +410,7 @@ footer {
   box-shadow: 0 10px 28px rgba(17, 24, 39, .06);
 }
 
-.roadmap-new article > span {
+.roadmap-new article>span {
   grid-column: 1;
   grid-row: 1 / span 2;
   display: inline-flex;
@@ -424,20 +424,20 @@ footer {
   font-weight: 900;
 }
 
-.roadmap-new article > h3 {
+.roadmap-new article>h3 {
   grid-column: 2;
   grid-row: 1;
   margin: 0;
 }
 
-.roadmap-new article > p {
+.roadmap-new article>p {
   grid-column: 2;
   grid-row: 2;
   max-width: 760px;
   margin: 0;
 }
 
-.roadmap-new article > small {
+.roadmap-new article>small {
   grid-column: 2;
   grid-row: 3;
   justify-self: start;
@@ -549,7 +549,7 @@ footer {
   margin-bottom: 18px;
 }
 
-.concept-header > div {
+.concept-header>div {
   min-width: 0;
   padding: 14px;
   border: 1px solid var(--border);
@@ -802,6 +802,7 @@ footer {
 /* Laptop */
 
 @media (max-width: 1280px) {
+
   .method-grid,
   .week-index,
   .resource-grid {
@@ -987,17 +988,17 @@ footer {
     padding: 18px;
   }
 
-  .roadmap-new article > span {
+  .roadmap-new article>span {
     width: 40px;
     height: 40px;
   }
 
-  .roadmap-new article > h3 {
+  .roadmap-new article>h3 {
     font-size: 1.18rem;
     line-height: 1.2;
   }
 
-  .roadmap-new article > p {
+  .roadmap-new article>p {
     max-width: 100%;
     font-size: .98rem;
     line-height: 1.58;
@@ -1028,7 +1029,7 @@ footer {
     border-radius: 12px;
   }
 
-  .concept-header > div {
+  .concept-header>div {
     padding: 16px;
     border-radius: 18px;
   }
@@ -1128,5 +1129,181 @@ footer {
   .quiz-card,
   .notice {
     padding: 18px;
+  }
+}
+
+/* =========================================================
+   FINAL FIX — Study sections mobile/portrait
+   Fixes clipped text inside study modules/cards
+   Paste at the END of styles.css
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .week-module {
+    width: 100%;
+    max-width: 100%;
+    padding: 56px 16px;
+    overflow: visible;
+  }
+
+  .week-hero {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 28px;
+  }
+
+  .module-grid,
+  .module-content,
+  .module-aside,
+  .study-session,
+  .concept-list,
+  .review-grid {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: visible;
+  }
+
+  .module-aside {
+    position: static;
+  }
+
+  .aside-card,
+  .concept-card,
+  .review-section,
+  .review-grid article,
+  .quiz-card {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 20px;
+    overflow: visible;
+  }
+
+  .aside-card + .aside-card,
+  .concept-card + .concept-card,
+  .review-section,
+  .review-grid article + article,
+  .quiz-card {
+    margin-top: 16px;
+  }
+
+  .aside-card ul,
+  .review-grid ul {
+    width: 100%;
+    max-width: 100%;
+    margin: 12px 0 0;
+    padding-left: 22px;
+  }
+
+  .aside-card li,
+  .review-grid li,
+  .concept-card p,
+  .concept-section p,
+  .callout,
+  .quiz-card p,
+  .section-header p,
+  .week-hero p {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .concept-header {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .concept-header > div {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: visible;
+  }
+
+  .concept-header > div + div {
+    margin-top: 12px;
+  }
+
+  .concept-section {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-top: 18px;
+    overflow: visible;
+  }
+
+  .callout {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 16px;
+    overflow: visible;
+  }
+
+  .session-title {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 14px;
+    align-items: start;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .session-title > div,
+  .session-title h3,
+  .session-title p {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    overflow-wrap: anywhere;
+  }
+
+  .session-title h3 {
+    font-size: 1.18rem;
+    line-height: 1.22;
+  }
+
+  .session-title p {
+    font-size: .98rem;
+  }
+}
+@media (max-width: 430px) {
+  .week-module {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .aside-card,
+  .concept-card,
+  .review-section,
+  .review-grid article,
+  .quiz-card {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .week-hero h2 {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
+
+  .week-hero p {
+    font-size: 1rem;
+    line-height: 1.6;
   }
 }
