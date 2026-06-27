@@ -91,7 +91,6 @@ function renderQuiz(containerId, quizKey) {
   container.appendChild(form);
   container.appendChild(result);
 }
-
 document.addEventListener("DOMContentLoaded", () => {
   Object.keys(quizzes).forEach(key => renderQuiz(`quiz-${key}`, key));
 
@@ -105,4 +104,40 @@ document.addEventListener("DOMContentLoaded", () => {
   sidebar?.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => sidebar.classList.remove("open"));
   });
+
+  const examNoteModal = document.getElementById("examNoteModal");
+  const openExamNote = document.getElementById("openExamNote");
+  const closeExamNote = document.getElementById("closeExamNote");
+  const acceptExamNote = document.getElementById("acceptExamNote");
+
+  function showExamNote() {
+    examNoteModal?.classList.add("show");
+    examNoteModal?.setAttribute("aria-hidden", "false");
+  }
+
+  function hideExamNote() {
+    examNoteModal?.classList.remove("show");
+    examNoteModal?.setAttribute("aria-hidden", "true");
+    localStorage.setItem("itilExamNoteSeen", "true");
+  }
+
+  openExamNote?.addEventListener("click", showExamNote);
+  closeExamNote?.addEventListener("click", hideExamNote);
+  acceptExamNote?.addEventListener("click", hideExamNote);
+
+  examNoteModal?.addEventListener("click", (event) => {
+    if (event.target === examNoteModal) {
+      hideExamNote();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && examNoteModal?.classList.contains("show")) {
+      hideExamNote();
+    }
+  });
+
+  if (!localStorage.getItem("itilExamNoteSeen")) {
+    setTimeout(showExamNote, 700);
+  }
 });
