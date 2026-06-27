@@ -38,29 +38,25 @@ Semana 8: Escenarios, AI, automation y preparación final
 
 Cada semana incluye:
 
-```txt
-Objetivo
-Qué aprenderás
-3 sesiones de estudio
-Conceptos explicados
-Ejemplos tech
-Diferencias clave
-Tips de examen
-Tabla comparativa
-Errores comunes
-Checklist
-Quiz calificable
-```
 
-URL esperada:
+- Objetivo
+- Qué aprenderás
+- 3 sesiones de estudio
+- Conceptos explicados
+- Ejemplos tech
+- Diferencias clave
+- Tips de examen
+- Tabla comparativa
+- Errores comunes
+- Checklist
+- Quiz calificable
 
-```txt
-https://TU_USUARIO.github.io/itil-v5-study-guide/
-```
 
 ## Nota
 
 Esta guía no es material oficial y no reemplaza el libro ni materiales oficiales de PeopleCert.
 
 ## Website
+```txt
 https://gabrielvillagran.github.io/itilV5-StudyGuide/#inicio
+```
