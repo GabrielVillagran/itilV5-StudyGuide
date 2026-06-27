@@ -4,7 +4,7 @@ Guía web en español con términos clave en inglés para estudiar ITIL Foundati
 
 ## Enfoque
 
-Esta guía es un manual de referencia, no un sitio de flashcards. Está pensada para entender conceptos, ejemplos, diferencias y escenarios antes de tomar un curso dictado por profesionales.
+Esta guía es un manual de referencia. Está pensada para entender conceptos, ejemplos, diferencias y escenarios antes de tomar un curso dictado por profesionales.
 
 ## Roadmap
 
@@ -51,25 +51,6 @@ Errores comunes
 Checklist
 Quiz calificable
 ```
-
-## Archivos
-
-```txt
-index.html
-styles.css
-questions.js
-app.js
-README.md
-```
-
-## Deploy con GitHub Pages
-
-1. Crea un repositorio.
-2. Sube estos archivos al root.
-3. Ve a `Settings > Pages`.
-4. Selecciona `Deploy from a branch`.
-5. Selecciona `main` y `/root`.
-6. Guarda.
 
 URL esperada:
 
